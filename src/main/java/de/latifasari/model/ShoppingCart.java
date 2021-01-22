@@ -1,5 +1,6 @@
 package main.java.de.latifasari.model;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -11,12 +12,12 @@ public class ShoppingCart {
     private Map<Product, Integer> productMap;
     private int totalProduct;
 
-    public ShoppingCart(long id, float discount_absolut, float discount_percent, Map<Product, Integer> products, int totalProduct) {
+    public ShoppingCart(long id, float discount_absolut, float discount_percent) {
         this.id = id;
         this.discount_absolut = discount_absolut;
         this.discount_percent = discount_percent;
-        this.productMap = products;
-        this.totalProduct = totalProduct;
+        this.totalProduct = 0;
+        this.productMap = new HashMap<>();
     }
 
     public long getId() {
