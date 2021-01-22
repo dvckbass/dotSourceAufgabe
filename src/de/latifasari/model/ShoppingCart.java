@@ -2,6 +2,7 @@ package de.latifasari.model;
 
 import java.util.List;
 
+// Das Modell für ShoppingCart
 public class ShoppingCart {
     private long id;
     private float discount_absolut;
