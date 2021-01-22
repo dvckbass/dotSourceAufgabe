@@ -70,6 +70,21 @@ public class ShoppingCartController {
         } else if(this.shoppingCart.getDiscount_percent() != 0) {
             sum -= sum * this.shoppingCart.getDiscount_percent() / 100;
         }
-        return sum;
+        return Math.floor(sum * 100) /100;
+    }
+
+    // Aktualisiere das View
+    public void updateView() throws IllegalArgumentException{
+        float discount;
+        // Checke, welches Rabatt hat der Einkaufswagen
+        if(this.shoppingCart.getDiscount_absolut() != 0 && this.shoppingCart.getDiscount_percent() != 0)  {
+            throw new IllegalArgumentException();
+        } else if(this.shoppingCart.getDiscount_absolut() != 0) {
+            discount = this.shoppingCart.getDiscount_absolut();
+        } else {
+            discount = this.shoppingCart.getDiscount_percent();
+        }
+        this.shoppingCartView.checkout(this.shoppingCart.getTotalProduct(), this.shoppingCart.getProductMap(),
+                discount, getTotalPrice());
     }
 }

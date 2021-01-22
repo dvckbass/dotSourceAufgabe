@@ -1,7 +1,6 @@
 package main.java.de.latifasari.model;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 // Das Modell für ShoppingCart
