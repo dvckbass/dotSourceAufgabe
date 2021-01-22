@@ -85,6 +85,6 @@ public class ShoppingCartController {
             discount = this.shoppingCart.getDiscount_percent();
         }
         this.shoppingCartView.checkout(this.shoppingCart.getTotalProduct(), this.shoppingCart.getProductMap(),
-                discount, getTotalPrice());
+                discount, getTotalPrice(), this.shoppingCart.getDiscountType());
     }
 }
