@@ -1,6 +1,6 @@
-package de.latifasari.repository;
+package main.java.de.latifasari.repository;
 
-import de.latifasari.model.Product;
+import main.java.de.latifasari.model.Product;
 
 import java.util.ArrayList;
 import java.util.List;

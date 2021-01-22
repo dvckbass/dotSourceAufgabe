@@ -1,4 +1,4 @@
-package de.latifasari.model;
+package main.java.de.latifasari.model;
 
 import java.util.List;
 
